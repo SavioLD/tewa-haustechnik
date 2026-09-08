@@ -13,7 +13,7 @@ LeadTable-Kachel von AWW.
 - `index.html` – die komplette Seite (self-contained, keine Build-Schritte nötig)
 - `supabase-bewerbungen.sql` – legt den Storage-Bucket für den optionalen Lebenslauf-Upload an
 - `.nojekyll` – sorgt dafür, dass GitHub Pages die Dateien 1:1 ausliefert
-- `bilder/` – Hero-Fotos & Logo (folgen mit dem Bildmaterial-Upload)
+- `bilder/` – AWW-Logo (vorhanden: farbig + weiß); Hero-Fotos folgen mit dem Bildmaterial-Upload
 - `creatives/` – Meta-Ads: Creatives + Werbetexte (folgen in SCHRITT 2 nach Bild-Upload)
 
 ## ⚠️ Noch zu bestätigen / einzupflegen
@@ -21,15 +21,14 @@ LeadTable-Kachel von AWW.
 Diese Punkte sind mit sinnvollen, recherchierten Werten belegt und sollten mit
 den echten Daten von AWW abgeglichen werden:
 
-1. **CI-Farben & Schrift** – aktuell ein kräftiges Industrie-Blau
-   (`--brand:#0069b4`) mit Graphit/Aluminium-Grau, Schriften *Barlow* (Headlines)
-   und *Inter* (Fließtext). Die exakten AWW-CI-Werte konnten in der Bauumgebung
-   nicht direkt von aww.de ausgelesen werden. Zum Angleichen einfach die
+1. **CI-Farben & Schrift** – das AWW-Blau (`--brand:#1b558b`) ist direkt aus dem
+   offiziellen AWW-Logo (`bilder/aww-logo.svg`) übernommen; dazu Schriften
+   *Barlow* (Headlines) und *Inter* (Fließtext). Zum Feinjustieren einfach die
    `:root`-Variablen ganz oben im `<style>`-Block in `index.html` (und ggf. die
    Google-Fonts-Zeile im `<head>`) austauschen.
-2. **Logo** – Text-Fallback „AWW“. Sobald ein Logo in `bilder/` liegt
-   (`aww-logo.png`/`.svg` bzw. `aww-logo-weiss.png`/`.svg`), wird es
-   automatisch verwendet.
+2. **Logo** – das offizielle AWW-Logo liegt in `bilder/` (`aww-logo.svg` farbig,
+   `aww-logo-weiss.svg` weiß für dunkle Flächen) und wird automatisch verwendet.
+   Fehlt eine Datei, greift der Text-Fallback „AWW“.
 3. **Benefits** – die 6 Benefit-Kacheln basieren auf öffentlich verfügbaren
    Angaben von AWW (bAV, 30 Tage Urlaub, JobRad, Kantine, Schichtzulagen,
    Weihnachts-/Urlaubsgeld u. a.). Bitte final mit AWW bestätigen.
