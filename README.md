@@ -20,16 +20,14 @@ LeadTable-Kachel von Gempper.
 Diese Punkte sind mit sinnvollen Platzhaltern belegt und sollten mit den echten
 Daten von Gempper abgeglichen werden:
 
-1. **CI-Farben & Schrift** – die Live-Website `gempper-gmbh.de` war aus der
-   Build-Umgebung technisch nicht abrufbar. Das aktuelle Farb-/Schrift-Set ist
-   daher ein sauberer, industrieller Vorschlag (Stahlblau `--brand:#1f6fb2` +
-   Graphit + warmer Signal-Akzent `--accent:#ef5a1e`; Schriften *Barlow Semi
-   Condensed* / *Inter*). Zum exakten Angleichen an das echte Gempper-Branding
-   nur die `:root`-Variablen ganz oben im `<style>`-Block in `index.html` bzw.
-   den Google-Fonts-Link austauschen – der Rest der Seite zieht automatisch nach.
-2. **Logo** – Text-Fallback „GEMPPER“. Sobald ein Logo in `bilder/` liegt
-   (`gempper-logo.png`/`.svg` bzw. `gempper-logo-weiss.png`/`.svg`), wird es
-   automatisch verwendet.
+1. **CI-Farben & Schrift** – an der Website `gempper-gmbh.de` abgenommen:
+   tiefes Marine-/Petrolblau (`--brand-900:#163a4e`, `--brand:#2a5c7a`) + Weiß
+   (monochrom), Schrift *Montserrat*. Feinjustage der Hex-Werte jederzeit über
+   die `:root`-Variablen ganz oben im `<style>`-Block in `index.html`.
+2. **Logo** – das echte weiße Gempper-Logo liegt in `bilder/`
+   (`gempper-logo-weiss.avif` + `.png`-Fallback) und wird in Kopfzeile, Hero und
+   Footer (alle im Marineblau) automatisch verwendet. Falls für andere Zwecke
+   eine dunkle Logovariante gebraucht wird, einfach zusätzlich in `bilder/` ablegen.
 3. **Benefits** – die 6 Benefit-Kacheln bilden die von Gempper vorgegebenen
    Leistungen ab: betriebliche Altersvorsorge (BAV/Altersvorsorge),
    vermögenswirksame Leistungen, Urlaubsgeld, voll bezahlte Überstunden,
