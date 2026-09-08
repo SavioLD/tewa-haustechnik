@@ -2,17 +2,25 @@ HIER BILDER ABLEGEN
 ===================
 
 In diesen Ordner (bilder/) gehören die Fotos und das Logo für die
-TeWa-Karriereseite. Alles ist optional – fehlt eine Datei, greift ein
-sauberer Fallback (Farbverlauf im Hero bzw. Text-Logo).
+AWW-Karriereseite. Alles ist optional – fehlt eine Datei, greift ein
+sauberer Fallback (Farbverlauf im Hero bzw. Text-Logo „AWW“).
 
-HERO-FOTOS (Querformat, mind. ~1600 px breit, Motiv eher rechts):
-  hero.jpg               -> allgemeines Hero-Bild (Standard)
-  anlagenmechaniker.jpg  -> wird bei ?stelle=anlagenmechaniker gezeigt
-  servicetechniker.jpg   -> wird bei ?stelle=servicetechniker gezeigt
+HERO-FOTOS (Querformat, mind. ~1600 px breit, Motiv eher rechts,
+da links die Textfläche liegt):
+  hero.jpg              -> allgemeines Hero-Bild (Standard, ohne ?stelle=)
+  maschinenfuehrer.jpg  -> wird bei ?stelle=maschinenfuehrer gezeigt
+  cnc-einrichter.jpg    -> wird bei ?stelle=cnc gezeigt
+  ausbildung.jpg        -> wird bei ?stelle=ausbildung gezeigt
 
-LOGO (ersetzt automatisch den Text-Schriftzug „TeWa“):
-  tewa-logo.svg  oder  tewa-logo.png         -> farbiges Logo (Kopfzeile)
-  tewa-logo-weiss.svg  oder  tewa-logo-weiss.png  -> weißes Logo (Hero & Footer)
+Motiv-Ideen: echte Aufnahmen aus der Fertigung (Strangpresse, CNC-Bearbeitung,
+Anlagen, Team an der Maschine, Azubis). Authentische Fotos wirken deutlich
+besser als Stockmaterial.
 
-Sobald echtes Bildmaterial hier liegt, können daraus auch die Meta-Ads-
-Creatives erstellt werden (siehe ../creatives/).
+LOGO (ersetzt automatisch den Text-Schriftzug „AWW“):
+  aww-logo.svg  oder  aww-logo.png              -> farbiges Logo (Kopfzeile)
+  aww-logo-weiss.svg  oder  aww-logo-weiss.png  -> weißes Logo (Hero & Footer,
+                                                   dunkler Hintergrund)
+
+Sobald echtes Bildmaterial hier liegt, werden daraus die Meta-Ads-Creatives
+erstellt (SCHRITT 2, siehe ../creatives/). Erst dann, und ausschließlich mit
+diesem Material.

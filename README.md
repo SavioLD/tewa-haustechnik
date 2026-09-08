@@ -1,38 +1,44 @@
-# TeWa Haustechnik – Karriereseite
+# AWW Aluminium-Werke Wutöschingen – Karriereseite
 
-Recruiting-Landingpage / Ad-Funnel für die **TeWa Haustechnik GmbH** (Balingen).
-Stellen: **Anlagenmechaniker SHK** und **Servicetechniker SHK** (m/w/d).
+Recruiting-Landingpage / Ad-Funnel für die **Aluminium-Werke Wutöschingen AG & Co. KG**
+(Wutöschingen). Stellen: **Maschinen- & Anlagenführer**, **CNC-Einrichter** und
+**Ausbildungsstellen** (m/w/d).
 
-Aufbau 1:1 an der ALWA-Karriereseite orientiert – in eigenem TeWa-CI, mit den
-beiden oben genannten Positionen und angebunden an die LeadTable-Kachel von TeWa.
+Aufbau 1:1 an der ALWA-Karriereseite orientiert – im eigenen AWW-CI, mit den
+drei oben genannten Positionen, einem Vorfilter-Formular und angebunden an die
+LeadTable-Kachel von AWW.
 
 ## Inhalt
 
 - `index.html` – die komplette Seite (self-contained, keine Build-Schritte nötig)
 - `supabase-bewerbungen.sql` – legt den Storage-Bucket für den optionalen Lebenslauf-Upload an
 - `.nojekyll` – sorgt dafür, dass GitHub Pages die Dateien 1:1 ausliefert
-- `bilder/` – Hero-Fotos & Logo (siehe unten)
-- `creatives/` – Meta-Ads: Werbetexte (fertig) + Bild-Creatives (folgen, siehe Ordner)
+- `bilder/` – Hero-Fotos & Logo (folgen mit dem Bildmaterial-Upload)
+- `creatives/` – Meta-Ads: Creatives + Werbetexte (folgen in SCHRITT 2 nach Bild-Upload)
 
 ## ⚠️ Noch zu bestätigen / einzupflegen
 
-Diese Punkte sind mit sinnvollen Platzhaltern belegt und sollten mit den echten
-Daten von TeWa abgeglichen werden:
+Diese Punkte sind mit sinnvollen, recherchierten Werten belegt und sollten mit
+den echten Daten von AWW abgeglichen werden:
 
-1. **CI-Farben & Schrift** – aktuell ein professionelles Haustechnik-Blau
-   (`--brand:#0e5aa7`). Zum Anpassen an das echte TeWa-Branding nur die
-   `:root`-Variablen ganz oben im `<style>`-Block in `index.html` austauschen.
-2. **Logo** – Text-Fallback „TeWa“. Sobald ein Logo in `bilder/` liegt
-   (`tewa-logo.png`/`.svg` bzw. `tewa-logo-weiss.png`/`.svg`), wird es
+1. **CI-Farben & Schrift** – aktuell ein kräftiges Industrie-Blau
+   (`--brand:#0069b4`) mit Graphit/Aluminium-Grau, Schriften *Barlow* (Headlines)
+   und *Inter* (Fließtext). Die exakten AWW-CI-Werte konnten in der Bauumgebung
+   nicht direkt von aww.de ausgelesen werden. Zum Angleichen einfach die
+   `:root`-Variablen ganz oben im `<style>`-Block in `index.html` (und ggf. die
+   Google-Fonts-Zeile im `<head>`) austauschen.
+2. **Logo** – Text-Fallback „AWW“. Sobald ein Logo in `bilder/` liegt
+   (`aww-logo.png`/`.svg` bzw. `aww-logo-weiss.png`/`.svg`), wird es
    automatisch verwendet.
-3. **Benefits** – die 6 Benefit-Kacheln sind ein fachlich passender Vorschlag
-   für einen SHK-Meisterbetrieb (siehe Kommentar im Abschnitt `BENEFITS`).
-   Bitte mit den tatsächlichen Benefits von TeWa ersetzen.
-4. **E-Mail** – `info@tewa-haustechnik.de` ist eine Annahme. Bitte die richtige
-   (Bewerbungs-)Adresse eintragen. Telefon `07433 3910270` ist aus dem öffentlichen
-   Firmeneintrag übernommen – bitte prüfen.
-5. **Impressum/Datenschutz-Links** – zeigen auf `https://tewa-haustechnik.de/impressum`
-   bzw. `/datenschutz`. Bitte die korrekten URLs verifizieren.
+3. **Benefits** – die 6 Benefit-Kacheln basieren auf öffentlich verfügbaren
+   Angaben von AWW (bAV, 30 Tage Urlaub, JobRad, Kantine, Schichtzulagen,
+   Weihnachts-/Urlaubsgeld u. a.). Bitte final mit AWW bestätigen.
+4. **Kontakt** – Telefon `07746 810` und `jobs@aww.de` sind aus öffentlichen
+   Quellen übernommen – bitte die richtige (Bewerbungs-)Adresse/Telefonnummer
+   prüfen.
+5. **Impressum/Datenschutz-Links** – zeigen auf `https://www.aww.de/impressum/`
+   bzw. `https://www.aww.de/datenschutz/`. Bitte die korrekten URLs verifizieren
+   (Datenschutz-Slug ggf. anpassen).
 
 ## Bilder (Hero-Fotos & Logo)
 
@@ -41,13 +47,14 @@ passende Bild – fehlt es, bleibt ein Farbverlauf stehen (kein kaputtes Bild).
 Erwartete Dateinamen:
 
 - `bilder/hero.jpg` – allgemeines Hero-Bild (Startseite ohne Stellen-Parameter)
-- `bilder/anlagenmechaniker.jpg` – bei `?stelle=anlagenmechaniker`
-- `bilder/servicetechniker.jpg` – bei `?stelle=servicetechniker`
+- `bilder/maschinenfuehrer.jpg` – bei `?stelle=maschinenfuehrer`
+- `bilder/cnc-einrichter.jpg` – bei `?stelle=cnc`
+- `bilder/ausbildung.jpg` – bei `?stelle=ausbildung`
 
 Logo (optional, ersetzt den Text-Schriftzug automatisch):
 
-- `bilder/tewa-logo.svg` / `.png` – farbiges Logo (Kopfzeile)
-- `bilder/tewa-logo-weiss.svg` / `.png` – weißes Logo (Hero & Footer, dunkler Hintergrund)
+- `bilder/aww-logo.svg` / `.png` – farbiges Logo (Kopfzeile)
+- `bilder/aww-logo-weiss.svg` / `.png` – weißes Logo (Hero & Footer, dunkler Hintergrund)
 
 Hero-Fotos: Querformat, mind. ~1600 px breit. Motiv rechts platzieren –
 links liegt die Textfläche.
@@ -55,35 +62,41 @@ links liegt die Textfläche.
 ## Stellen-Deeplinks für die Ad
 
 Die Anzeige kann direkt auf eine Stelle verlinken; die Seite wählt sie vor und
-startet beim Erfahrungs-Schritt:
+startet beim Vorfilter-Schritt:
 
-- `…/?stelle=anlagenmechaniker`
-- `…/?stelle=servicetechniker`
+- `…/?stelle=maschinenfuehrer`
+- `…/?stelle=cnc`
+- `…/?stelle=ausbildung`
 
 ## Screening / Vorfilterung
 
 Das Bewerbungsformular ist ein 3-Schritt-Funnel zur Vorfilterung:
 
-1. **Stelle wählen** (Anlagenmechaniker / Servicetechniker)
-2. **Qualifikation** (Ausbildung / Erfahrung) – wer „weder Ausbildung noch
-   Erfahrung im SHK-Bereich“ wählt, wird ausgesteuert (kein Lead an LeadTable).
+1. **Stelle wählen** (Maschinen- & Anlagenführer / CNC-Einrichter / Ausbildung)
+2. **Kurze Fragen**: Bereitschaft zur 3-Schicht, Deutschkenntnisse,
+   Führerschein Klasse B, Hintergrund (Erfahrung / Quereinsteiger).
+   Quereinsteiger werden **nicht** ausgesteuert – ausdrücklich willkommen.
+   Wer für eine **Produktionsstelle** *keine* 3-Schicht-Bereitschaft angibt,
+   wird ausgesteuert (kein Lead an LeadTable). Für **Ausbildung** gilt diese
+   Aussteuerung nicht.
 3. **Kontaktdaten** + optionaler Lebenslauf-Upload
 
-Screen-out und Erfolg gelten nur für den aktuellen Besuch – ein Seiten-Neuladen
-startet frisch (kein dauerhaftes Sperren per localStorage).
+Alle Antworten (Schicht, Deutsch, Führerschein, Hintergrund) werden mit an
+LeadTable übergeben. Screen-out und Erfolg gelten nur für den aktuellen Besuch –
+ein Seiten-Neuladen startet frisch (kein dauerhaftes Sperren per localStorage).
 
 ## Live schalten (GitHub Pages)
 
 1. Repo-Settings → **Pages** → Source: **Deploy from a branch**, Branch: `main` / `/root`
    (oder den gewünschten Branch).
-2. Nach ein paar Minuten ist die Seite unter `https://<user>.github.io/tewa-haustechnik/`
-   erreichbar (bzw. unter der hinterlegten Custom-Domain, z. B. `tewa-haustechnik.de/karriere`).
+2. Nach ein paar Minuten ist die Seite unter `https://<user>.github.io/<repo>/`
+   erreichbar (bzw. unter der hinterlegten Custom-Domain, z. B. `aww.de/karriere`).
 
 ## Bewerbungen (LeadTable)
 
 Jede abgeschlossene Bewerbung wird per Webhook an LeadTable gesendet
 (Felder u. a. `vorname`, `nachname`, `name`, `email`, `telefon`, `stelle`,
-`erfahrung`, `lebenslauf`, `quelle`, `seite`).
+`schicht`, `deutsch`, `fuehrerschein`, `hintergrund`, `lebenslauf`, `quelle`, `seite`).
 Der Webhook ist in `index.html` in der Variable `WEBHOOK_URL` hinterlegt:
 
 ```
@@ -91,7 +104,7 @@ https://api-v2.lead-table.com/api/webhook/generic/…
 ```
 
 Portal-Kachel (Leads einsehen):
-`https://portal.lead-table.com/customer/6a9e9ca28d4aae7e0039840b/table/6a9e9cb32b0d1835c8e2b7d7/leads`
+`https://portal.lead-table.com/customer/6a8f02f883e182faf76b3d43/table/6a8f03157849fe409cdbd94a/leads`
 
 ## Lebenslauf-Upload (optional)
 
