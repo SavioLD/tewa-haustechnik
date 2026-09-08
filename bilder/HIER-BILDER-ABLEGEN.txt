@@ -2,17 +2,17 @@ HIER BILDER ABLEGEN
 ===================
 
 In diesen Ordner (bilder/) gehören die Fotos und das Logo für die
-TeWa-Karriereseite. Alles ist optional – fehlt eine Datei, greift ein
+b&p-Karriereseite. Alles ist optional – fehlt eine Datei, greift ein
 sauberer Fallback (Farbverlauf im Hero bzw. Text-Logo).
 
 HERO-FOTOS (Querformat, mind. ~1600 px breit, Motiv eher rechts):
-  hero.jpg               -> allgemeines Hero-Bild (Standard)
-  anlagenmechaniker.jpg  -> wird bei ?stelle=anlagenmechaniker gezeigt
-  servicetechniker.jpg   -> wird bei ?stelle=servicetechniker gezeigt
+  hero.jpg                  -> Hero-Bild (Standard)
+  zerspanungsmechaniker.jpg -> alternatives Hero-Bild (wird sonst genutzt)
 
-LOGO (ersetzt automatisch den Text-Schriftzug „TeWa“):
-  tewa-logo.svg  oder  tewa-logo.png         -> farbiges Logo (Kopfzeile)
-  tewa-logo-weiss.svg  oder  tewa-logo-weiss.png  -> weißes Logo (Hero & Footer)
+LOGO (ersetzt automatisch den Text-Schriftzug „b&p“):
+  bp-logo.svg  oder  bp-logo.png              -> farbiges Logo (Kopfzeile)
+  bp-logo-weiss.svg  oder  bp-logo-weiss.png  -> weißes Logo (Hero & Footer)
 
-Sobald echtes Bildmaterial hier liegt, können daraus auch die Meta-Ads-
-Creatives erstellt werden (siehe ../creatives/).
+Sobald echtes Bildmaterial hier liegt (Team, Maschinen, Halle, Werkstücke,
+Logo), können daraus die Meta-Ads-Creatives erstellt werden -> Schritt 2,
+siehe ../creatives/.
