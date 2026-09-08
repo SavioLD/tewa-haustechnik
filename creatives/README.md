@@ -1,33 +1,37 @@
-# Meta-Ads Creatives – TeWa Haustechnik
+# Meta-Ads Creatives – Gempper GmbH
 
-Hier liegen die Werbemittel für die Meta-Kampagne (Facebook/Instagram) zur
-Anlagenmechaniker- und Servicetechniker-Suche.
+Hier entstehen in **Schritt 2** die Werbemittel für die Meta-Kampagne
+(Facebook/Instagram) zur Suche nach **Industriemechaniker** und
+**Zerspanungsmechaniker** (m/w/d).
 
 ## Status
 
-- ✅ **Werbetexte** – fertig: siehe [`werbetexte-meta-ads.md`](./werbetexte-meta-ads.md)
-  (Primary Text, Headlines, Descriptions, CTAs für beide Stellen).
-- ⏳ **Bild-Creatives** – folgen, sobald echtes Bildmaterial im Repo liegt.
+- ⏳ **Werbetexte** (Primary Text, Headline, Description) – folgen in Schritt 2.
+- ⏳ **Bild-Creatives** – folgen in Schritt 2, sobald echtes Gempper-Bildmaterial
+  im Repo liegt.
 
-## Wichtig: Bild-Creatives erst nach Upload des Bildmaterials
+## Wichtig: Schritt 2 startet erst nach Upload des Bildmaterials
 
-Wie besprochen werden die Bild-/Video-Creatives **erst dann** erstellt, wenn
-echtes TeWa-Bildmaterial im Repo vorliegt (Team, Fahrzeuge, Baustellen,
-Betrieb, Logo). Die Creatives sollen mit diesem Material gestaltet werden,
-damit sie authentisch wirken und maximale Bewerberqualität erzeugen.
+Wie besprochen werden Werbetexte **und** Bild-/Video-Creatives **erst dann**
+erstellt, wenn echtes Gempper-Bildmaterial im Repo vorliegt (Team, Maschinen,
+Fertigung, Betrieb, Logo). Die Creatives sollen mit genau diesem Material
+gestaltet werden, damit sie authentisch wirken und maximale Bewerberqualität
+erzeugen – statt reiner Masse.
 
 **So geht's weiter:**
-1. Bildmaterial in `../bilder/` hochladen (echte Fotos vom Team/Betrieb) –
-   siehe `../bilder/HIER-BILDER-ABLEGEN.txt`.
+1. Bildmaterial in `../bilder/` hochladen (echte Fotos vom Team/den Maschinen/der
+   Fertigung + Logo) – siehe `../bilder/HIER-BILDER-ABLEGEN.txt`.
 2. Dann werden pro Stelle Creatives in den gängigen Meta-Formaten erstellt:
    - **4:5** (1080 × 1350 px) – Feed
    - **9:16** (1080 × 1920 px) – Stories / Reels
    - **1:1** (1080 × 1080 px) – optional
 3. Die fertigen Dateien landen hier im Ordner, z. B.:
-   - `creative-anlagenmechaniker-4x5.png`
-   - `creative-anlagenmechaniker-story.png`
-   - `creative-servicetechniker-4x5.png`
-   - `creative-servicetechniker-story.png`
+   - `creative-industriemechaniker-4x5.png`
+   - `creative-industriemechaniker-story.png`
+   - `creative-zerspanungsmechaniker-4x5.png`
+   - `creative-zerspanungsmechaniker-story.png`
+4. Dazu passende Werbetexte (Primary Text, Headline, Description) in
+   `werbetexte-meta-ads.md`.
 
-Die Text-Overlays und Claims der Creatives orientieren sich an den
-Werbetexten in `werbetexte-meta-ads.md`.
+Alle Creatives entstehen im CI von Gempper und orientieren sich an der
+Karriereseite (Farben, Claim, CTA „Jetzt bewerben“).

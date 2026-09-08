@@ -1,10 +1,11 @@
-# TeWa Haustechnik – Karriereseite
+# Gempper GmbH – Karriereseite
 
-Recruiting-Landingpage / Ad-Funnel für die **TeWa Haustechnik GmbH** (Balingen).
-Stellen: **Anlagenmechaniker SHK** und **Servicetechniker SHK** (m/w/d).
+Recruiting-Landingpage / Ad-Funnel für die **Gempper GmbH Fertigungstechnik** (Albstadt).
+Stellen: **Industriemechaniker** und **Zerspanungsmechaniker** (m/w/d).
 
-Aufbau 1:1 an der ALWA-Karriereseite orientiert – in eigenem TeWa-CI, mit den
-beiden oben genannten Positionen und angebunden an die LeadTable-Kachel von TeWa.
+Aufbau 1:1 an der ALWA-Karriereseite orientiert – im eigenen Gempper-CI, mit den
+beiden oben genannten Positionen, einem Vorfilter-Funnel und angebunden an die
+LeadTable-Kachel von Gempper.
 
 ## Inhalt
 
@@ -12,27 +13,33 @@ beiden oben genannten Positionen und angebunden an die LeadTable-Kachel von TeWa
 - `supabase-bewerbungen.sql` – legt den Storage-Bucket für den optionalen Lebenslauf-Upload an
 - `.nojekyll` – sorgt dafür, dass GitHub Pages die Dateien 1:1 ausliefert
 - `bilder/` – Hero-Fotos & Logo (siehe unten)
-- `creatives/` – Meta-Ads: Werbetexte (fertig) + Bild-Creatives (folgen, siehe Ordner)
+- `creatives/` – Meta-Ads: entstehen in **Schritt 2**, sobald das Bildmaterial vorliegt
 
 ## ⚠️ Noch zu bestätigen / einzupflegen
 
 Diese Punkte sind mit sinnvollen Platzhaltern belegt und sollten mit den echten
-Daten von TeWa abgeglichen werden:
+Daten von Gempper abgeglichen werden:
 
-1. **CI-Farben & Schrift** – aktuell ein professionelles Haustechnik-Blau
-   (`--brand:#0e5aa7`). Zum Anpassen an das echte TeWa-Branding nur die
-   `:root`-Variablen ganz oben im `<style>`-Block in `index.html` austauschen.
-2. **Logo** – Text-Fallback „TeWa“. Sobald ein Logo in `bilder/` liegt
-   (`tewa-logo.png`/`.svg` bzw. `tewa-logo-weiss.png`/`.svg`), wird es
+1. **CI-Farben & Schrift** – die Live-Website `gempper-gmbh.de` war aus der
+   Build-Umgebung technisch nicht abrufbar. Das aktuelle Farb-/Schrift-Set ist
+   daher ein sauberer, industrieller Vorschlag (Stahlblau `--brand:#1f6fb2` +
+   Graphit + warmer Signal-Akzent `--accent:#ef5a1e`; Schriften *Barlow Semi
+   Condensed* / *Inter*). Zum exakten Angleichen an das echte Gempper-Branding
+   nur die `:root`-Variablen ganz oben im `<style>`-Block in `index.html` bzw.
+   den Google-Fonts-Link austauschen – der Rest der Seite zieht automatisch nach.
+2. **Logo** – Text-Fallback „GEMPPER“. Sobald ein Logo in `bilder/` liegt
+   (`gempper-logo.png`/`.svg` bzw. `gempper-logo-weiss.png`/`.svg`), wird es
    automatisch verwendet.
-3. **Benefits** – die 6 Benefit-Kacheln sind ein fachlich passender Vorschlag
-   für einen SHK-Meisterbetrieb (siehe Kommentar im Abschnitt `BENEFITS`).
-   Bitte mit den tatsächlichen Benefits von TeWa ersetzen.
-4. **E-Mail** – `info@tewa-haustechnik.de` ist eine Annahme. Bitte die richtige
-   (Bewerbungs-)Adresse eintragen. Telefon `07433 3910270` ist aus dem öffentlichen
-   Firmeneintrag übernommen – bitte prüfen.
-5. **Impressum/Datenschutz-Links** – zeigen auf `https://tewa-haustechnik.de/impressum`
-   bzw. `/datenschutz`. Bitte die korrekten URLs verifizieren.
+3. **Benefits** – die 6 Benefit-Kacheln bilden die von Gempper vorgegebenen
+   Leistungen ab: betriebliche Altersvorsorge (BAV/Altersvorsorge),
+   vermögenswirksame Leistungen, Urlaubsgeld, voll bezahlte Überstunden,
+   gestellte Arbeitskleidung und den sicheren Familienbetrieb.
+4. **Kontaktdaten** – Adresse `Kohlplattenstraße 14 · 72459 Albstadt`, Telefon
+   `07431 989749-0` und `info@gempper-gmbh.de` stammen aus öffentlichen
+   Firmeneinträgen. Bitte prüfen bzw. die gewünschte Bewerbungs-Adresse eintragen.
+5. **Impressum/Datenschutz-Links** – zeigen auf `https://www.gempper-gmbh.de/impressum`
+   bzw. `/datenschutz` sowie die Canonical-URL auf `…/karriere/`. Bitte die
+   korrekten URLs verifizieren.
 
 ## Bilder (Hero-Fotos & Logo)
 
@@ -41,13 +48,13 @@ passende Bild – fehlt es, bleibt ein Farbverlauf stehen (kein kaputtes Bild).
 Erwartete Dateinamen:
 
 - `bilder/hero.jpg` – allgemeines Hero-Bild (Startseite ohne Stellen-Parameter)
-- `bilder/anlagenmechaniker.jpg` – bei `?stelle=anlagenmechaniker`
-- `bilder/servicetechniker.jpg` – bei `?stelle=servicetechniker`
+- `bilder/industriemechaniker.jpg` – bei `?stelle=industriemechaniker`
+- `bilder/zerspanungsmechaniker.jpg` – bei `?stelle=zerspanungsmechaniker`
 
-Logo (optional, ersetzt den Text-Schriftzug automatisch):
+Logo (optional, ersetzt den Text-Schriftzug „GEMPPER“ automatisch):
 
-- `bilder/tewa-logo.svg` / `.png` – farbiges Logo (Kopfzeile)
-- `bilder/tewa-logo-weiss.svg` / `.png` – weißes Logo (Hero & Footer, dunkler Hintergrund)
+- `bilder/gempper-logo.svg` / `.png` – farbiges Logo (Kopfzeile)
+- `bilder/gempper-logo-weiss.svg` / `.png` – weißes Logo (Hero & Footer, dunkler Hintergrund)
 
 Hero-Fotos: Querformat, mind. ~1600 px breit. Motiv rechts platzieren –
 links liegt die Textfläche.
@@ -55,35 +62,45 @@ links liegt die Textfläche.
 ## Stellen-Deeplinks für die Ad
 
 Die Anzeige kann direkt auf eine Stelle verlinken; die Seite wählt sie vor und
-startet beim Erfahrungs-Schritt:
+startet beim Qualifikations-Schritt:
 
-- `…/?stelle=anlagenmechaniker`
-- `…/?stelle=servicetechniker`
+- `…/?stelle=industriemechaniker`
+- `…/?stelle=zerspanungsmechaniker`
 
 ## Screening / Vorfilterung
 
-Das Bewerbungsformular ist ein 3-Schritt-Funnel zur Vorfilterung:
+Das Bewerbungsformular ist ein 7-Schritt-Funnel zur Vorfilterung. Jeder Schritt
+ist ein einziger Klick (Auto-Weiter), damit die Conversion hoch bleibt:
 
-1. **Stelle wählen** (Anlagenmechaniker / Servicetechniker)
-2. **Qualifikation** (Ausbildung / Erfahrung) – wer „weder Ausbildung noch
-   Erfahrung im SHK-Bereich“ wählt, wird ausgesteuert (kein Lead an LeadTable).
-3. **Kontaktdaten** + optionaler Lebenslauf-Upload
+1. **Stelle wählen** (Industriemechaniker / Zerspanungsmechaniker / beides)
+2. **Ausbildung & Erfahrung** – *Pflicht.* Wer „keine passende Ausbildung und
+   keine Erfahrung im Metallbereich“ wählt, wird ausgesteuert.
+3. **Wohnort & Umkreis** – *Pflicht.* Postleitzahl-Eingabe + Umkreis-Frage
+   (max. ~30 km um Albstadt). Wer „Umzug/Pendeln kommt nicht infrage“ wählt,
+   wird ausgesteuert.
+4. **Führerschein** – *Pflicht.* Ohne Führerschein → Aussteuerung.
+5. **Deutschkenntnisse** – *Pflicht.* Nur Grundkenntnisse (A1–A2) → Aussteuerung.
+6. **MAZAK / Mazatrol** – *optional* (Kenntnisse sind ein Plus, kein Muss;
+   keine Aussteuerung).
+7. **Kontaktdaten** + optionaler Lebenslauf-Upload.
 
-Screen-out und Erfolg gelten nur für den aktuellen Besuch – ein Seiten-Neuladen
-startet frisch (kein dauerhaftes Sperren per localStorage).
+Ausgesteuerte Bewerbungen erzeugen **keinen** Lead in LeadTable. Screen-out und
+Erfolg gelten nur für den aktuellen Besuch – ein Seiten-Neuladen startet frisch
+(kein dauerhaftes Sperren per localStorage).
 
 ## Live schalten (GitHub Pages)
 
 1. Repo-Settings → **Pages** → Source: **Deploy from a branch**, Branch: `main` / `/root`
    (oder den gewünschten Branch).
-2. Nach ein paar Minuten ist die Seite unter `https://<user>.github.io/tewa-haustechnik/`
-   erreichbar (bzw. unter der hinterlegten Custom-Domain, z. B. `tewa-haustechnik.de/karriere`).
+2. Nach ein paar Minuten ist die Seite unter `https://<user>.github.io/<repo>/`
+   erreichbar (bzw. unter der hinterlegten Custom-Domain, z. B. `gempper-gmbh.de/karriere`).
 
 ## Bewerbungen (LeadTable)
 
-Jede abgeschlossene Bewerbung wird per Webhook an LeadTable gesendet
-(Felder u. a. `vorname`, `nachname`, `name`, `email`, `telefon`, `stelle`,
-`erfahrung`, `lebenslauf`, `quelle`, `seite`).
+Jede abgeschlossene (nicht ausgesteuerte) Bewerbung wird per Webhook an LeadTable
+gesendet (Felder u. a. `vorname`, `nachname`, `name`, `email`, `telefon`, `plz`,
+`stelle`, `qualifikation`, `umkreis`, `fuehrerschein`, `deutsch`,
+`mazak_mazatrol`, `lebenslauf`, `quelle`, `seite`).
 Der Webhook ist in `index.html` in der Variable `WEBHOOK_URL` hinterlegt:
 
 ```
@@ -91,7 +108,7 @@ https://api-v2.lead-table.com/api/webhook/generic/…
 ```
 
 Portal-Kachel (Leads einsehen):
-`https://portal.lead-table.com/customer/6a9e9ca28d4aae7e0039840b/table/6a9e9cb32b0d1835c8e2b7d7/leads`
+`https://portal.lead-table.com/customer/6a9986f6ae1832073e265d33/table/6a998711ae1832073e2665e1/leads`
 
 ## Lebenslauf-Upload (optional)
 

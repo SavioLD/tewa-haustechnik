@@ -1,8 +1,8 @@
 -- =====================================================================
--- TeWa Haustechnik Karriereseite: Storage-Bucket für den optionalen
+-- Gempper GmbH Karriereseite: Storage-Bucket für den optionalen
 -- Lebenslauf-Upload
 -- ---------------------------------------------------------------------
--- Einmalig im Supabase SQL-Editor des TeWa-Projekts ausführen.
+-- Einmalig im Supabase SQL-Editor des Gempper-Projekts ausführen.
 -- Danach kann die Landingpage Dateien in den Bucket "bewerbungen"
 -- hochladen; der Link landet im LeadTable-Datensatz (Feld "lebenslauf").
 --
