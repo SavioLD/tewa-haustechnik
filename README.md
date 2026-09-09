@@ -72,12 +72,15 @@ startet beim Vorfilter-Schritt:
 Das Bewerbungsformular ist ein 3-Schritt-Funnel zur Vorfilterung:
 
 1. **Stelle wählen** (Maschinen- & Anlagenführer / CNC-Einrichter / Ausbildung)
-2. **Kurze Fragen**: Bereitschaft zur 3-Schicht, Deutschkenntnisse,
+2. **4 Qualifizierungsfragen**: Bereitschaft zur 3-Schicht, Deutschkenntnisse,
    Führerschein Klasse B, Hintergrund (Erfahrung / Quereinsteiger).
-   Quereinsteiger werden **nicht** ausgesteuert – ausdrücklich willkommen.
-   Wer für eine **Produktionsstelle** *keine* 3-Schicht-Bereitschaft angibt,
-   wird ausgesteuert (kein Lead an LeadTable). Für **Ausbildung** gilt diese
-   Aussteuerung nicht.
+   Aussteuerung (kein Lead an LeadTable, freundliche Absage) in zwei Fällen:
+   - **Produktionsstelle** ohne 3-Schicht-Bereitschaft (bei **Ausbildung** gilt das nicht).
+   - **„Alles maximal schlecht"**: schwächste Option bei Schicht *und* Deutsch
+     *und* Führerschein zugleich – auch bei der Ausbildung.
+   **Quereinsteiger** werden **nie** allein deswegen ausgesteuert – ausdrücklich
+   willkommen. Streng-/Locker-Stellschraube: `MIN_STRIKES` in `index.html`
+   (3 = nur wenn wirklich alles am schlechtesten, 2 = strenger).
 3. **Kontaktdaten** + optionaler Lebenslauf-Upload
 
 Alle Antworten (Schicht, Deutsch, Führerschein, Hintergrund) werden mit an

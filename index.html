@@ -653,7 +653,7 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d5e8f7}
         <div class="result" id="screenoutView">
           <div class="result__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg></div>
           <h3>Danke für dein Interesse</h3>
-          <p>Unsere Produktion läuft im 3-Schicht-Betrieb – dafür ist die Bereitschaft zur Schichtarbeit Voraussetzung. Aktuell passt das leider noch nicht. Du bist überzeugt, dass du trotzdem zu uns passt? Dann ruf uns gerne direkt an: <a href="tel:+497746810">07746 810</a>.<br /><br />Aus Versehen falsch angeklickt? Lade die Seite einfach neu und versuche es erneut.</p>
+          <p>Nach deinen Angaben passt es aktuell leider noch nicht ganz mit den Voraussetzungen für diese Stelle – bei unseren Produktionsstellen ist z.&nbsp;B. die Bereitschaft zur 3-Schicht-Arbeit wichtig. Du bist überzeugt, dass du trotzdem zu uns passt? Dann ruf uns gerne direkt an: <a href="tel:+497746810">07746 810</a>.<br /><br />Aus Versehen etwas falsch angeklickt? Lade die Seite einfach neu und versuche es erneut.</p>
         </div>
 
         <div class="fnav" id="formNav">
@@ -744,10 +744,22 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d5e8f7}
   var UPLOAD_MAX    = 10 * 1024 * 1024;
   var UPLOAD_TYPES  = ["application/pdf","image/jpeg","image/png","image/webp","application/msword","application/vnd.openxmlformats-officedocument.wordprocessingml.document"];
 
-  /* Vorfilter: keine 3-Schicht-Bereitschaft -> Ausschluss (außer bei Ausbildung).
-     Quereinsteiger werden NICHT ausgesteuert. */
-  var SHIFT_SCREEN_OUT = "Nein, nur Tagschicht möglich";
+  /* -------- Vorfilter-Logik (Qualifizierung) --------
+     1) Produktionsstellen (nicht Ausbildung): 3-Schicht-Bereitschaft ist
+        Voraussetzung -> ohne sie wird ausgesteuert.
+     2) "Alles maximal schlecht": wer bei Schicht, Deutsch UND Führerschein
+        jeweils die schwächste Option wählt, wird ebenfalls freundlich
+        abgelehnt – auch bei der Ausbildung.
+     Quereinsteiger werden NIE allein deswegen ausgesteuert (ausdrücklich
+     willkommen). MIN_STRIKES steuert, wie streng Regel 2 ist
+     (3 = nur wenn wirklich alles am schlechtesten; 2 = strenger). */
   var AUSBILDUNG_VALUE = "Ausbildungsstellen (m/w/d)";
+  var WEAK = {
+    schicht:       "Nein, nur Tagschicht möglich",
+    deutsch:       "Grundkenntnisse",
+    fuehrerschein: "Nein"
+  };
+  var MIN_STRIKES = 3;
 
   var ALIASES = {
     "maschinenfuehrer":"maschinenfuehrer","maschinen-und-anlagenfuehrer":"maschinenfuehrer","anlagenfuehrer":"maschinenfuehrer","maf":"maschinenfuehrer","produktion":"maschinenfuehrer",
@@ -835,7 +847,15 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d5e8f7}
     errBox.classList.remove("is-visible");
   }
   function isScreenedOut(){
-    return selectedValue("stelle")!==AUSBILDUNG_VALUE && selectedValue("schicht")===SHIFT_SCREEN_OUT;
+    var istAusbildung = selectedValue("stelle") === AUSBILDUNG_VALUE;
+    // 1) Produktion: ohne 3-Schicht-Bereitschaft raus
+    if (!istAusbildung && selectedValue("schicht") === WEAK.schicht) return true;
+    // 2) Alles maximal schlecht (Schicht + Deutsch + Führerschein je schwächste Option)
+    var strikes = 0;
+    if (selectedValue("schicht") === WEAK.schicht) strikes++;
+    if (selectedValue("deutsch") === WEAK.deutsch) strikes++;
+    if (selectedValue("fuehrerschein") === WEAK.fuehrerschein) strikes++;
+    return strikes >= MIN_STRIKES;
   }
   function next(){
     if (locked || !stepValid(current) || submitting) return;
