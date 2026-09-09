@@ -960,7 +960,7 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d5e6f4}
     function rv(name){ var c=form.querySelector('input[name="'+name+'"]:checked'); return c?c.value:""; }
     function tv(name){ var i=form.querySelector('input[name="'+name+'"]:not([type="radio"]):not([type="file"])'); return i?i.value.trim():""; }
     return {
-      vorname:tv("vorname"), nachname:tv("nachname"), name:(tv("vorname")+" "+tv("nachname")).trim(),
+      vorname:tv("vorname"), nachname:tv("nachname"),
       email:tv("email"), telefon:tv("telefon"), plz:tv("plz"),
       stelle:rv("stelle"), qualifikation:rv("qualifikation"), umkreis:rv("umkreis"),
       fuehrerschein:rv("fuehrerschein"), deutsch:rv("deutsch"),
