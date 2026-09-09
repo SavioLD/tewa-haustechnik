@@ -65,26 +65,41 @@ startet beim Qualifikations-Schritt:
 - `…/?stelle=industriemechaniker`
 - `…/?stelle=zerspanungsmechaniker`
 
-## Screening / Vorfilterung
+## Screening / Vorfilterung (Punkte-Bewertung)
 
-Das Bewerbungsformular ist ein 7-Schritt-Funnel zur Vorfilterung. Jeder Schritt
-ist ein einziger Klick (Auto-Weiter), damit die Conversion hoch bleibt:
+Das Bewerbungsformular ist ein 6-Schritt-Funnel mit **4 Qualifizierungsfragen**.
+Jeder Schritt ist ein einziger Klick (Auto-Weiter), damit die Conversion hoch bleibt:
 
 1. **Stelle wählen** (Industriemechaniker / Zerspanungsmechaniker / beides)
-2. **Ausbildung & Erfahrung** – *Pflicht.* Wer „keine passende Ausbildung und
-   keine Erfahrung im Metallbereich“ wählt, wird ausgesteuert.
-3. **Wohnort & Umkreis** – *Pflicht.* Postleitzahl-Eingabe + Umkreis-Frage
-   (max. ~30 km um Albstadt). Wer „Umzug/Pendeln kommt nicht infrage“ wählt,
-   wird ausgesteuert.
-4. **Führerschein** – *Pflicht.* Ohne Führerschein → Aussteuerung.
-5. **Deutschkenntnisse** – *Pflicht.* Nur Grundkenntnisse (A1–A2) → Aussteuerung.
-6. **MAZAK / Mazatrol** – *optional* (Kenntnisse sind ein Plus, kein Muss;
-   keine Aussteuerung).
-7. **Kontaktdaten** + optionaler Lebenslauf-Upload.
+2. **Ausbildung & Erfahrung** – Qualifizierungsfrage
+3. **Wohnort & Umkreis** – Qualifizierungsfrage (Postleitzahl-Eingabe +
+   Umkreis-Frage, max. ~30 km um Albstadt)
+4. **Führerschein** – Qualifizierungsfrage
+5. **Deutschkenntnisse** – Qualifizierungsfrage
+6. **Kontaktdaten** + optionaler Lebenslauf-Upload
 
-Ausgesteuerte Bewerbungen erzeugen **keinen** Lead in LeadTable. Screen-out und
-Erfolg gelten nur für den aktuellen Besuch – ein Seiten-Neuladen startet frisch
-(kein dauerhaftes Sperren per localStorage).
+Die 4 Qualifizierungsfragen (2–5) werden mit **Punkten** bewertet (beste
+Antwort 4/3, schlechteste 0). Zwei Wege führen zur freundlichen Absage:
+
+- **Sofortiger K.-o.:** „Wohnort zu weit + kein Umzug/Pendeln“ → der Job ist
+  praktisch nicht machbar.
+- **Gesamtbewertung:** Wer insgesamt **unter `PASS_MIN` Punkten** liegt (z. B.
+  alles maximal schlecht ausgefüllt), wird ebenfalls abgelehnt. Ein einzelner
+  schwacher Punkt bei sonst starken Antworten reicht dagegen **nicht** zur
+  Ablehnung. Aktuell `PASS_MIN = 6` von max. 13 Punkten – der Wert lässt sich in
+  `index.html` (Block „Vorfilterung per Punkte-Bewertung“) mit einem Handgriff
+  strenger/lockerer stellen.
+
+Ausgesteuerte Bewerbungen erzeugen **keinen** Lead in LeadTable. Jeder gültige
+Lead enthält zusätzlich die erreichte Punktzahl (`score` / `score_max`), damit
+die Lead-Qualität auf einen Blick sichtbar ist. Screen-out und Erfolg gelten nur
+für den aktuellen Besuch – ein Seiten-Neuladen startet frisch (kein dauerhaftes
+Sperren per localStorage).
+
+> Hinweis: MAZAK-/Mazatrol-Kenntnisse werden weiter in Stellenanzeige & FAQ als
+> „von Vorteil“ kommuniziert; als eigene (optionale) Formularfrage wurden sie
+> entfernt, um bei 4 Qualifizierungsfragen zu bleiben – bei Bedarf schnell wieder
+> ergänzbar.
 
 ## Live schalten (GitHub Pages)
 
@@ -98,7 +113,7 @@ Erfolg gelten nur für den aktuellen Besuch – ein Seiten-Neuladen startet fris
 Jede abgeschlossene (nicht ausgesteuerte) Bewerbung wird per Webhook an LeadTable
 gesendet (Felder u. a. `vorname`, `nachname`, `name`, `email`, `telefon`, `plz`,
 `stelle`, `qualifikation`, `umkreis`, `fuehrerschein`, `deutsch`,
-`mazak_mazatrol`, `lebenslauf`, `quelle`, `seite`).
+`score`, `score_max`, `lebenslauf`, `quelle`, `seite`).
 Der Webhook ist in `index.html` in der Variable `WEBHOOK_URL` hinterlegt:
 
 ```

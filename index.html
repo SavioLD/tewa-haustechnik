@@ -217,7 +217,7 @@ section[id],.form-card{scroll-margin-top:80px}
 .apply__contact a{color:var(--brand-dark);text-decoration:underline;white-space:nowrap}
 .form-card__head{padding:24px 32px 0}
 .progress{height:6px;background:var(--panel-2);border-radius:999px;overflow:hidden}
-.progress__bar{height:100%;width:14%;background:var(--brand);border-radius:999px;transition:width .35s ease}
+.progress__bar{height:100%;width:16%;background:var(--brand);border-radius:999px;transition:width .35s ease}
 .progress__label{display:flex;justify-content:space-between;font-size:12.5px;color:var(--ink-mute);margin-top:10px;font-weight:600}
 .form-card__body{padding:24px 32px 34px;min-height:360px;display:flex;flex-direction:column}
 @media(max-width:560px){.form-card__body,.form-card__head{padding-left:18px;padding-right:18px}}
@@ -518,7 +518,7 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d5e6f4}
     <div class="form-card">
       <div class="form-card__head">
         <div class="progress"><div class="progress__bar" id="progressBar"></div></div>
-        <div class="progress__label"><span id="stepLabel">Schritt 1 von 7</span><span>~2 Min.</span></div>
+        <div class="progress__label"><span id="stepLabel">Schritt 1 von 6</span><span>~2 Min.</span></div>
       </div>
 
       <form class="form-card__body" id="applyForm" novalidate>
@@ -586,20 +586,8 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d5e6f4}
           </div>
         </div>
 
-        <!-- STEP 6 · Mazak / Mazatrol (optional) -->
+        <!-- STEP 6 · Kontaktdaten -->
         <div class="fstep" data-step="6">
-          <h3>CNC-Kenntnisse</h3>
-          <p class="hint">Kein Muss – aber ein echtes Plus. Wir arbeiten mit MAZAK-Maschinen und der Mazatrol-Steuerung.</p>
-          <p class="q">Hast du Erfahrung mit MAZAK-Maschinen oder Mazatrol?<span class="opt">optional</span></p>
-          <div class="choice-grid" data-field="mazak">
-            <label class="choice"><input type="radio" name="mazak" value="Ja, Erfahrung mit MAZAK / Mazatrol" /><span class="key">A</span><span>Ja, Erfahrung mit MAZAK / Mazatrol</span></label>
-            <label class="choice"><input type="radio" name="mazak" value="Erfahrung mit anderen CNC-Steuerungen" /><span class="key">B</span><span>Erfahrung mit anderen CNC-Steuerungen</span></label>
-            <label class="choice"><input type="radio" name="mazak" value="Noch keine, aber lernbereit" /><span class="key">C</span><span>Noch keine – aber ich bin lernbereit</span></label>
-          </div>
-        </div>
-
-        <!-- STEP 7 · Kontaktdaten -->
-        <div class="fstep" data-step="7">
           <h3>Du hast es fast geschafft</h3>
           <p class="hint">Hinterlasse kurz deine Kontaktdaten. Wir melden uns persönlich bei dir.</p>
           <div class="frow">
@@ -729,14 +717,45 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d5e6f4}
   var UPLOAD_MAX    = 10 * 1024 * 1024;
   var UPLOAD_TYPES  = ["application/pdf","image/jpeg","image/png","image/webp","application/msword","application/vnd.openxmlformats-officedocument.wordprocessingml.document"];
 
-  /* Vorfilterung: Antworten, die zur Aussteuerung führen (kein Lead
-     an LeadTable). Pro Feld die exakt hinterlegten Werte. */
-  var DISQUALIFY = {
-    qualifikation: ["Keine passende Ausbildung und keine Erfahrung im Metallbereich"],
-    umkreis:       ["Nein, ein Umzug oder Pendeln kommt nicht infrage"],
-    fuehrerschein: ["Nein, aktuell keinen Führerschein"],
-    deutsch:       ["Nur Grundkenntnisse (A1-A2)"]
+  /* ================================================================
+     Vorfilterung per Punkte-Bewertung (4 Qualifizierungsfragen).
+     - Jede Antwort gibt Punkte (0 = am schlechtesten, 4/3 = am besten).
+     - Ein sofortiger K.-o.: Wohnort zu weit + kein Umzug/Pendeln – dann
+       ist der Job praktisch nicht machbar (unabhängig von der Punktzahl).
+     - Wer insgesamt unter PASS_MIN Punkten liegt (z. B. alles maximal
+       schlecht ausgefüllt), wird freundlich abgelehnt -> kein Lead.
+     PASS_MIN ist der einzige Stellhebel und lässt sich jederzeit
+     anpassen (höher = strenger). Max. erreichbar: 4+3+3+3 = 13 Punkte.
+     ================================================================ */
+  var SCORE_FIELDS = ["qualifikation","umkreis","fuehrerschein","deutsch"];
+  var SCORE_MAX = 13;
+  var PASS_MIN  = 6;
+  var SCORES = {
+    qualifikation: {
+      "Abgeschlossene Ausbildung als Industrie- oder Zerspanungsmechaniker + Berufserfahrung": 4,
+      "Abgeschlossene Ausbildung als Industrie- oder Zerspanungsmechaniker": 3,
+      "Vergleichbarer Metallberuf / Quereinsteiger mit mehrjähriger Erfahrung": 2,
+      "Keine passende Ausbildung und keine Erfahrung im Metallbereich": 0
+    },
+    umkreis: {
+      "Ja, max. 30 km von Albstadt entfernt": 3,
+      "Weiter weg, aber umzugs- bzw. pendelbereit": 2,
+      "Nein, ein Umzug oder Pendeln kommt nicht infrage": 0
+    },
+    fuehrerschein: {
+      "Ja, Führerschein Klasse B vorhanden": 3,
+      "In Ausbildung / kurz vor der Prüfung": 2,
+      "Nein, aktuell keinen Führerschein": 0
+    },
+    deutsch: {
+      "Muttersprache oder sehr gut (C1/C2)": 3,
+      "Gut, für den Arbeitsalltag sicher (B2)": 3,
+      "Mittel (B1)": 2,
+      "Nur Grundkenntnisse (A1-A2)": 0
+    }
   };
+  /* Sofortige (harte) K.-o.-Antworten – unabhängig von der Punktzahl. */
+  var KO = { umkreis: ["Nein, ein Umzug oder Pendeln kommt nicht infrage"] };
 
   var ALIASES = {
     "industriemechaniker":"industriemechaniker","industrie":"industriemechaniker","im":"industriemechaniker","mechaniker":"industriemechaniker",
@@ -826,10 +845,17 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d5e6f4}
     btnNext.disabled=!stepValid(current);
     errBox.classList.remove("is-visible");
   }
+  function scoreTotal(){
+    var t=0;
+    SCORE_FIELDS.forEach(function(f){ var v=selectedValue(f); if (SCORES[f] && SCORES[f][v]!=null) t+=SCORES[f][v]; });
+    return t;
+  }
+  function allScored(){ return SCORE_FIELDS.every(function(f){ return selectedValue(f)!==""; }); }
   function isDisqualified(){
-    for (var f in DISQUALIFY){
-      if (DISQUALIFY[f].indexOf(selectedValue(f))!==-1) return true;
-    }
+    /* 1) harter K.-o. (greift sofort bei der Auswahl) */
+    for (var f in KO){ if (KO[f].indexOf(selectedValue(f))!==-1) return true; }
+    /* 2) Gesamtbewertung – erst wenn alle 4 Fragen beantwortet sind */
+    if (allScored() && scoreTotal() < PASS_MIN) return true;
     return false;
   }
   function next(){
@@ -937,7 +963,8 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d5e6f4}
       vorname:tv("vorname"), nachname:tv("nachname"), name:(tv("vorname")+" "+tv("nachname")).trim(),
       email:tv("email"), telefon:tv("telefon"), plz:tv("plz"),
       stelle:rv("stelle"), qualifikation:rv("qualifikation"), umkreis:rv("umkreis"),
-      fuehrerschein:rv("fuehrerschein"), deutsch:rv("deutsch"), mazak_mazatrol:rv("mazak"),
+      fuehrerschein:rv("fuehrerschein"), deutsch:rv("deutsch"),
+      score:scoreTotal(), score_max:SCORE_MAX,
       lebenslauf:"", datenschutz:"Ja (Einwilligung mit Absenden, Art. 6 Abs. 1 lit. a DSGVO)",
       quelle:"Karriere-Landingpage Gempper GmbH", seite:location.href
     };
