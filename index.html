@@ -958,9 +958,11 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d5e8f7}
 
   function collect(){
     function val(name){ var c=form.querySelector('input[name="'+name+'"]:checked'); if(c) return c.value; var inp=form.querySelector('input[name="'+name+'"]:not([type="radio"])'); return inp?inp.value.trim():""; }
-    // Name bewusst nur EINMAL (kombiniert) an LeadTable – keine getrennten
-    // vorname/nachname-Felder, damit der Name in der Kachel nicht doppelt erscheint.
-    return { name:(val("vorname")+" "+val("nachname")).trim(), email:val("email"), telefon:val("telefon"),
+    // Namen NUR getrennt als vorname/nachname übergeben – KEIN kombiniertes
+    // "name"-Feld. Sonst baut LeadTable den Anzeigenamen aus Vorname+Nachname
+    // und füllt beide aus "name", wodurch der Name doppelt erscheint
+    // ("Max Mustermann Max Mustermann").
+    return { vorname:val("vorname"), nachname:val("nachname"), email:val("email"), telefon:val("telefon"),
              stelle:val("stelle"), schicht:val("schicht"), deutsch:val("deutsch"), fuehrerschein:val("fuehrerschein"), hintergrund:val("hintergrund"),
              lebenslauf:"", datenschutz:"Ja (Einwilligung mit Absenden, Art. 6 Abs. 1 lit. a DSGVO)",
              quelle:"Karriere-Landingpage AWW Wutöschingen", seite:location.href };
