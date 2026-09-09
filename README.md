@@ -97,8 +97,9 @@ ein Seiten-Neuladen startet frisch (kein dauerhaftes Sperren per localStorage).
 ## Bewerbungen (LeadTable)
 
 Jede abgeschlossene Bewerbung wird per Webhook an LeadTable gesendet
-(Felder u. a. `vorname`, `nachname`, `name`, `email`, `telefon`, `stelle`,
-`schicht`, `deutsch`, `fuehrerschein`, `hintergrund`, `lebenslauf`, `quelle`, `seite`).
+(Felder u. a. `name` (Vor- und Nachname kombiniert, bewusst nur einmal), `email`,
+`telefon`, `stelle`, `schicht`, `deutsch`, `fuehrerschein`, `hintergrund`,
+`lebenslauf`, `quelle`, `seite`).
 Der Webhook ist in `index.html` in der Variable `WEBHOOK_URL` hinterlegt:
 
 ```
