@@ -1,37 +1,33 @@
 # Meta-Ads Creatives – Gempper GmbH
 
-Hier entstehen in **Schritt 2** die Werbemittel für die Meta-Kampagne
-(Facebook/Instagram) zur Suche nach **Industriemechaniker** und
-**Zerspanungsmechaniker** (m/w/d).
+Werbemittel für die Meta-Kampagne (Facebook/Instagram) zur Suche nach einem
+**Industrie- oder Zerspanungsmechaniker (m/w/d)** (eine kombinierte Stelle).
 
 ## Status
 
-- ⏳ **Werbetexte** (Primary Text, Headline, Description) – folgen in Schritt 2.
-- ⏳ **Bild-Creatives** – folgen in Schritt 2, sobald echtes Gempper-Bildmaterial
-  im Repo liegt.
+- ✅ **Bild-Creatives** – fertig: 3 Varianten × 2 Formate (4:5 + 9:16).
+- ✅ **Werbetexte** – fertig: siehe [`werbetexte-meta-ads.md`](./werbetexte-meta-ads.md)
+  (Primary Text, Headlines, Descriptions je Variante).
 
-## Wichtig: Schritt 2 startet erst nach Upload des Bildmaterials
+## Creatives (3 Varianten, je 4:5 und 9:16)
 
-Wie besprochen werden Werbetexte **und** Bild-/Video-Creatives **erst dann**
-erstellt, wenn echtes Gempper-Bildmaterial im Repo vorliegt (Team, Maschinen,
-Fertigung, Betrieb, Logo). Die Creatives sollen mit genau diesem Material
-gestaltet werden, damit sie authentisch wirken und maximale Bewerberqualität
-erzeugen – statt reiner Masse.
+| Variante | Konzept | 4:5 (Feed) | 9:16 (Stories/Reels) |
+|---|---|---|---|
+| 1 | Direkt / Stellen-Fokus | `gempper-01-direkt-4x5.png` | `gempper-01-direkt-9x16.png` |
+| 2 | Benefits | `gempper-02-benefits-4x5.png` | `gempper-02-benefits-9x16.png` |
+| 3 | Präzision / Wechsel-Hook | `gempper-03-praezision-4x5.png` | `gempper-03-praezision-9x16.png` |
 
-**So geht's weiter:**
-1. Bildmaterial in `../bilder/` hochladen (echte Fotos vom Team/den Maschinen/der
-   Fertigung + Logo) – siehe `../bilder/HIER-BILDER-ABLEGEN.txt`.
-2. Dann werden pro Stelle Creatives in den gängigen Meta-Formaten erstellt:
-   - **4:5** (1080 × 1350 px) – Feed
-   - **9:16** (1080 × 1920 px) – Stories / Reels
-   - **1:1** (1080 × 1080 px) – optional
-3. Die fertigen Dateien landen hier im Ordner, z. B.:
-   - `creative-industriemechaniker-4x5.png`
-   - `creative-industriemechaniker-story.png`
-   - `creative-zerspanungsmechaniker-4x5.png`
-   - `creative-zerspanungsmechaniker-story.png`
-4. Dazu passende Werbetexte (Primary Text, Headline, Description) in
-   `werbetexte-meta-ads.md`.
+- Format 4:5 = 1080 × 1350 px (Feed), 9:16 = 1080 × 1920 px (Stories/Reels).
+- Alle im Gempper-CI: Marineblau/Weiß, Schrift Montserrat, weißes Logo, weißer
+  CTA-Button „Jetzt bewerben".
+- Verwendetes Bildmaterial ausschließlich aus `../bilder/`
+  (`GMPW002`, `GMPW011`, `GMPW003`).
 
-Alle Creatives entstehen im CI von Gempper und orientieren sich an der
-Karriereseite (Farben, Claim, CTA „Jetzt bewerben“).
+## Einsatz
+
+- Kampagnenziel: Leads/Conversions auf die Karriereseite (Formular).
+- CTA-Button in Meta: „Jetzt bewerben".
+- A/B/C-Test der 3 Varianten empfohlen; Budget nach den besten Ergebnissen
+  umschichten.
+- Weitere Fotos (`GMPW022`, `GMPW024`, `GMPW025`) sind als Reserve für zusätzliche
+  Varianten vorhanden.
