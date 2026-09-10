@@ -7,7 +7,8 @@ Werbemittel für die Meta-Kampagne (Facebook/Instagram) zur Suche nach einem
 
 - ✅ **Bild-Creatives** – fertig: 3 Varianten × 2 Formate (4:5 + 9:16).
 - ✅ **Werbetexte** – fertig: siehe [`werbetexte-meta-ads.md`](./werbetexte-meta-ads.md)
-  (Primary Text, Headlines, Descriptions je Variante).
+  (3 allgemeine Primary-Text-Varianten + Headlines/Descriptions, frei mit jedem
+  Creative kombinierbar).
 
 ## Creatives (3 Varianten, je 4:5 und 9:16)
 
