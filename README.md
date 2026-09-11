@@ -13,8 +13,8 @@ LeadTable-Kachel von AWW.
 - `index.html` – die komplette Seite (self-contained, keine Build-Schritte nötig)
 - `supabase-bewerbungen.sql` – legt den Storage-Bucket für den optionalen Lebenslauf-Upload an
 - `.nojekyll` – sorgt dafür, dass GitHub Pages die Dateien 1:1 ausliefert
-- `bilder/` – AWW-Logo (vorhanden: farbig + weiß); Hero-Fotos folgen mit dem Bildmaterial-Upload
-- `creatives/` – Meta-Ads: Creatives + Werbetexte (folgen in SCHRITT 2 nach Bild-Upload)
+- `bilder/` – AWW-Logo (farbig + weiß) und web-optimierte Fotos (Hero pro Stelle + Galerie)
+- `creatives/` – Meta-Ads: fertige Bild-Creatives (4:5 + 9:16 je Stelle) + Werbetexte
 
 ## ⚠️ Noch zu bestätigen / einzupflegen
 
@@ -30,7 +30,7 @@ den echten Daten von AWW abgeglichen werden:
    `aww-logo-weiss.svg` weiß für dunkle Flächen) und wird automatisch verwendet.
    Fehlt eine Datei, greift der Text-Fallback „AWW“.
 3. **Benefits** – die 6 Benefit-Kacheln basieren auf öffentlich verfügbaren
-   Angaben von AWW (bAV, 30 Tage Urlaub, JobRad, Kantine, Schichtzulagen,
+   Angaben von AWW (bAV, 30 Tage Urlaub, Dienstbike, Kantine, Schichtzulagen,
    Weihnachts-/Urlaubsgeld u. a.). Bitte final mit AWW bestätigen.
 4. **Kontakt** – Telefon `07746 810` und `jobs@aww.de` sind aus öffentlichen
    Quellen übernommen – bitte die richtige (Bewerbungs-)Adresse/Telefonnummer

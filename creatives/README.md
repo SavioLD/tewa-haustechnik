@@ -1,41 +1,37 @@
 # Meta-Ads Creatives – AWW Aluminium-Werke Wutöschingen
 
-Hier entstehen die Werbemittel für die Meta-Kampagne (Facebook/Instagram) zur
-Gewinnung von **Maschinen- & Anlagenführern**, **CNC-Einrichtern** und
-**Auszubildenden** (m/w/d).
+Werbemittel für die Meta-Kampagne (Facebook/Instagram) zur Gewinnung von
+**Maschinen- & Anlagenführern**, **CNC-Einrichtern** und **Auszubildenden**
+(m/w/d). Alles im AWW-CI (Logo, AWW-Blau `#1b558b`) und ausschließlich aus dem
+gelieferten Bildmaterial gebaut.
 
 ## Status
+- ✅ **Bild-Creatives** – fertig (je Stelle 4:5 und 9:16, siehe unten).
+- ✅ **Werbetexte** – fertig: siehe [`werbetexte-meta-ads.md`](./werbetexte-meta-ads.md)
+  (Primary Text, Headlines, Descriptions je Stelle).
 
-- ⏳ **Bild-/Video-Creatives** – folgen in SCHRITT 2, sobald echtes AWW-Bildmaterial
-  im Repo liegt.
-- ⏳ **Werbetexte** (Primary Text, Headline, Description) – werden zusammen mit
-  den Creatives in SCHRITT 2 erstellt.
+## Creatives (Formate: 4:5 = Feed 1080×1350, 9:16 = Story/Reel 1080×1920)
 
-## Wichtig: Creatives erst nach Upload des Bildmaterials
+| Stelle | 4:5 | 9:16 | verwendetes Foto |
+|---|---|---|---|
+| Maschinen- & Anlagenführer | `creative-maschinenfuehrer-4x5.jpg` | `creative-maschinenfuehrer-9x16.jpg` | Leitstand / Biegen (Hochformat) |
+| CNC-Einrichter | `creative-cnc-einrichter-4x5.jpg` | `creative-cnc-einrichter-9x16.jpg` | Anlagenübersicht / Technologie |
+| Ausbildung | `creative-ausbildung-4x5.jpg` | `creative-ausbildung-9x16.jpg` | Luftaufnahme Werk / Strangpresse |
 
-Die Creatives werden **erst dann** gestaltet, wenn echtes AWW-Bildmaterial im
-Repo vorliegt (Fertigung, Maschinen/CNC, Team, Azubis, Logo) – und
-**ausschließlich mit diesem Material**, damit sie authentisch wirken und
-maximale Bewerberqualität statt reiner Masse erzeugen.
+Jedes der sechs gelieferten Fotos ist genau einmal in den Creatives verwendet;
+alle sechs sind zusätzlich auf der Karriereseite (Hero pro Stelle + Galerie
+„Einblicke") eingebunden.
 
-**So geht's weiter:**
-1. Bildmaterial in `../bilder/` hochladen (echte Fotos aus Betrieb & Team) –
-   siehe `../bilder/HIER-BILDER-ABLEGEN.txt`.
-2. Dann werden pro Stelle Creatives in den gewünschten Meta-Formaten erstellt:
-   - **4:5** (1080 × 1350 px) – Feed
-   - **9:16** (1080 × 1920 px) – Stories / Reels
-   - (weitere Formate nach Absprache, z. B. 1:1)
-3. Dazu die passenden **Werbetexte** (Primary Text, Headline, Description) je
-   Stelle, konvertierend und im AWW-CI.
-4. Die fertigen Dateien landen hier im Ordner, z. B.:
-   - `creative-maschinenfuehrer-4x5.png` / `-9x16.png`
-   - `creative-cnc-einrichter-4x5.png` / `-9x16.png`
-   - `creative-ausbildung-4x5.png` / `-9x16.png`
+## Verwendung in Meta
+- Kampagnenziel **Leads/Conversions** auf das Landingpage-Formular.
+- Deeplinks je Anzeigengruppe:
+  - Maschinen- & Anlagenführer → `…/?stelle=maschinenfuehrer`
+  - CNC-Einrichter → `…/?stelle=cnc`
+  - Ausbildung → `…/?stelle=ausbildung`
+- 4:5 für Feed (Facebook/Instagram), 9:16 für Stories/Reels.
+- Texte (Primary/Headline/Description) aus `werbetexte-meta-ads.md`.
 
-## Stellen-Deeplinks für die Ads
-
-Die Anzeige kann direkt auf eine Stelle verlinken (Formular startet vorbereitet):
-
-- Maschinen- & Anlagenführer → `…/?stelle=maschinenfuehrer`
-- CNC-Einrichter → `…/?stelle=cnc`
-- Ausbildung → `…/?stelle=ausbildung`
+## Nachbearbeiten / anpassen
+Die Creatives sind mit einem HTML-Template pixelgenau gerendert. Sollen Headline,
+Benefit-Zeilen oder Foto-Zuschnitt geändert werden, einfach kurz Bescheid geben –
+neue Varianten sind schnell erzeugt.
