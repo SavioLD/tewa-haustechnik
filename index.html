@@ -799,20 +799,21 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d5e8f7}
   /* Hero-Fotos: pro Stelle ein Bild in bilder/ ablegen, sonst allgemeines.
      Fehlt das Bild, bleibt der Farbverlauf stehen (kein kaputtes Bild). */
   var HERO_IMG = {
-    "":                  "hero.jpg",             // allgemein (ohne ?stelle=)
-    "anlagenmechaniker": "anlagenmechaniker.jpg",
-    "servicetechniker":  "servicetechniker.jpg"
+    "":                  "hero",             // allgemein (ohne ?stelle=)
+    "anlagenmechaniker": "anlagenmechaniker",
+    "servicetechniker":  "servicetechniker"
   };
   (function(){
     var heroMedia = document.getElementById("heroMedia");
-    var name = HERO_IMG[qsKey || ""] || HERO_IMG[""];
-    var fallbackName = HERO_IMG[""];
-    var cands = [
-      "bilder/" + encodeURIComponent(name),
-      encodeURIComponent(name),
-      "bilder/" + encodeURIComponent(fallbackName),
-      encodeURIComponent(fallbackName)
-    ];
+    var EXT = [".jpg",".jpeg",".png",".webp"];   // egal ob JPG oder PNG abgelegt wird
+    var base = HERO_IMG[qsKey || ""] || HERO_IMG[""];
+    var fallback = HERO_IMG[""];
+    var names = base === fallback ? [base] : [base, fallback];
+    var cands = [];
+    names.forEach(function(n){ EXT.forEach(function(e){
+      cands.push("bilder/" + encodeURIComponent(n) + e);
+      cands.push(encodeURIComponent(n) + e);
+    }); });
     (function tryNext(i){
       if (i >= cands.length) return;         // kein Bild gefunden -> Farbverlauf bleibt
       var probe = new Image();
