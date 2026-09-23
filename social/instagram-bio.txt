@@ -1,0 +1,34 @@
+TeWa Haustechnik GmbH – Instagram
+=================================
+
+PROFILBILD (Upload quadratisch 1080×1080, wird rund angezeigt)
+- social/tewa-ig-profilbild-blau.png   → Marken-Blau + weißes Logo (empfohlen, fällt im Feed auf)
+- social/tewa-ig-profilbild-weiss.png  → Weiß + farbiges Logo + Cyan-Ring (klassisch)
+
+
+BIO – EMPFOHLEN (Firmenprofil, Aufbau wie Vorlage)
+--------------------------------------------------
+🔥 I Ihr Meister für Haustechnik
+🔧 I Sanitär | Heizung | Wohnraumlüftung
+👉🏻 I Bad- & Heizungsmodernisierung vom Profi
+📍 I Aus Balingen für die Region
+
+
+BIO – ALTERNATIVE (Recruiting-Fokus, passend zur Karriereseite)
+---------------------------------------------------------------
+🔥 I Dein Handwerk. Dein Team. Dein Job.
+🔧 I Anlagenmechaniker & Servicetechniker (m/w/d)
+👉🏻 I Unbefristet · regional · faire Bezahlung
+📍 I Meisterbetrieb aus Balingen
+
+
+HINWEISE
+--------
+- Instagram-Bio: max. 150 Zeichen – beide Varianten liegen darunter.
+- Name-Feld (getrennt von der Bio, wichtig für Suche):
+  "TeWa Haustechnik · Balingen"
+- Link-Feld:
+  • Firmenprofil → https://tewa-haustechnik.de
+  • bei Recruiting-Bio → Link zur Karriereseite (GitHub Pages / eigene Domain)
+- Der Pfeil 👉🏻 nutzt einen Hautton-Modifier; falls die Zeichenzahl knapp wird,
+  einfach 👉 ohne Ton verwenden.
