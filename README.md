@@ -93,6 +93,18 @@ https://api-v2.lead-table.com/api/webhook/generic/…
 Portal-Kachel (Leads einsehen):
 `https://portal.lead-table.com/customer/6a9e9ca28d4aae7e0039840b/table/6a9e9cb32b0d1835c8e2b7d7/leads`
 
+## E-Mail-Benachrichtigung bei neuer Bewerbung
+
+Zusätzlich zum LeadTable-Webhook wird jede Bewerbung per E-Mail an die
+hinterlegten Adressen geschickt – über **Web3Forms** (`https://web3forms.com`).
+In `index.html` in der Variable `NOTIFY_KEY` (Access Key) hinterlegt; der
+Versand läuft parallel und „fire-and-forget" (schlägt er fehl, sieht der
+Bewerber trotzdem die Erfolgsmeldung, da die Bewerbung bereits bei LeadTable ist).
+
+- **Empfänger-Adressen** werden im Web3Forms-Dashboard verwaltet (nicht im Code).
+- Betreff: „Neue Bewerbung: <Stelle> – <Name>"; `reply-to` ist die Bewerber-E-Mail.
+- Deaktivieren: `NOTIFY_KEY` leeren.
+
 ## Lebenslauf-Upload (optional)
 
 Der optionale Datei-Upload nutzt Supabase Storage (Bucket `bewerbungen`).

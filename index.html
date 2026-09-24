@@ -662,6 +662,16 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d5e8f7}
   var WEBHOOK_URL = "https://api-v2.lead-table.com/api/webhook/generic/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0YWJsZUlEIjoiNmE5ZTljYjMyYjBkMTgzNWM4ZTJiN2Q3IiwiY3VzdG9tZXJJRCI6IjZhOWU5Y2EyOGQ0YWFlN2UwMDM5ODQwYiIsImFnZW5jeUlEIjoiNjliZDc3NzVlNGQxN2IzOGVkNjUzZDE2IiwiaWF0IjoxNzg4Nzc5Njk5fQ.l_VuXD068GQPwk-XO0KaSDXAqsifUfvc3QbndblCthY";
 
   /* ----------------------------------------------------------------
+     E-Mail-Benachrichtigung bei neuer Bewerbung (zusätzlich zu LeadTable).
+     Läuft über Web3Forms (https://web3forms.com): Jede Bewerbung wird per
+     E-Mail an die im Web3Forms-Konto hinterlegten Adressen geschickt.
+     Empfänger-Mails werden im Web3Forms-Dashboard verwaltet (nicht hier).
+     Zum Deaktivieren: NOTIFY_KEY leeren.
+     ---------------------------------------------------------------- */
+  var NOTIFY_URL = "https://api.web3forms.com/submit";
+  var NOTIFY_KEY = "39c376ff-a08b-405d-95ed-ff98cd035022";
+
+  /* ----------------------------------------------------------------
      Optionaler Lebenslauf-Upload via Supabase Storage.
      Solange SUPABASE_URL leer ist, wird der Upload übersprungen und
      die Bewerbung trotzdem gesendet (lebenslauf = "nicht hochgeladen").
@@ -856,12 +866,32 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d5e8f7}
              stelle:val("stelle"), erfahrung:val("erfahrung"), lebenslauf:"", datenschutz:"Ja (Einwilligung mit Absenden, Art. 6 Abs. 1 lit. a DSGVO)",
              quelle:"Karriere-Landingpage TeWa Haustechnik", seite:location.href };
   }
+  /* E-Mail-Benachrichtigung an die hinterlegten Adressen (Web3Forms).
+     Fire-and-forget: schlägt der Versand fehl, sieht der Bewerber trotzdem
+     die Erfolgsmeldung (die Bewerbung liegt ja bereits bei LeadTable). */
+  function notifyEmail(data){
+    if (!NOTIFY_KEY) return;
+    var name=(data.vorname+" "+data.nachname).trim();
+    var body={
+      access_key:NOTIFY_KEY,
+      subject:"Neue Bewerbung: "+(data.stelle||"TeWa Haustechnik")+(name?(" – "+name):""),
+      from_name:"TeWa Karriereseite",
+      replyto:data.email||"",
+      "Stelle":data.stelle, "Vorname":data.vorname, "Nachname":data.nachname,
+      "Telefon":data.telefon, "E-Mail":data.email, "Qualifikation":data.erfahrung,
+      "Lebenslauf":data.lebenslauf, "Quelle":data.quelle, "Seite":data.seite
+    };
+    try{
+      fetch(NOTIFY_URL,{ method:"POST", headers:{ "Content-Type":"application/json", "Accept":"application/json" }, body:JSON.stringify(body) }).catch(function(){});
+    }catch(e){}
+  }
   function submit(){
     if (form.querySelector('input[name="firma_website"]').value){ finishSuccess(); return; }
     submitting=true; btnNext.disabled=true; btnNext.textContent=cvFile?"Lebenslauf wird hochgeladen …":"Wird gesendet …"; errBox.classList.remove("is-visible");
     uploadCv().then(function(cvUrl){
       btnNext.textContent="Wird gesendet …";
       var data=collect(); data.lebenslauf=cvUrl||"nicht hochgeladen"; var payload=JSON.stringify(data);
+      notifyEmail(data);   // E-Mail-Benachrichtigung an hinterlegte Adressen (parallel, blockiert nicht)
       return fetch(WEBHOOK_URL,{ method:"POST", headers:{ "Content-Type":"application/json" }, body:payload })
         .then(function(res){ if(!res.ok) throw new Error("HTTP "+res.status); finishSuccess(); })
         .catch(function(){ return fetch(WEBHOOK_URL,{ method:"POST", mode:"no-cors", headers:{ "Content-Type":"text/plain" }, body:payload }).then(finishSuccess); });
