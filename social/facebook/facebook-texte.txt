@@ -1,0 +1,52 @@
+TeWa Haustechnik GmbH – Facebook
+================================
+
+BILDER (im gleichen Look, aufeinander abgestimmt)
+- tewa-fb-profilbild.png  → 1080×1080 px, quadratisch. Facebook zeigt es RUND an
+  (min. 170×170; wir liefern hoch aufgelöst). Motiv sitzt sicher im Kreis.
+- tewa-fb-titelbild.png   → 1702×630 px (= 2× der Desktop-Größe 851×315).
+  Wichtige Inhalte sind zentriert = auch auf dem Handy sichtbar (mobil wird seitlich
+  beschnitten, das Profilbild überlappt unten). Untere/äußere Ränder bewusst frei.
+
+Tipp Facebook: Titelbild wird auf Desktop 851×315, auf Mobil ~640×360 angezeigt –
+das zentrierte Motiv funktioniert auf beidem.
+
+
+BIO (Facebook-Seiten-Bio, max. 101 Zeichen)
+-------------------------------------------
+EMPFOHLEN (99 Zeichen):
+Ihr Meisterbetrieb für Haustechnik in Balingen: Sanitär, Heizung & Wohnraumlüftung – Ihr SHK-Profi.
+
+ALTERNATIVE (96 Zeichen):
+Meisterbetrieb für Sanitär, Heizung & Wohnraumlüftung in Balingen. Bad- & Heizungsmodernisierung.
+
+RECRUITING-VARIANTE (95 Zeichen):
+Haustechnik-Meisterbetrieb aus Balingen. Wir suchen Anlagenmechaniker & Servicetechniker (m/w/d).
+
+
+KURZBESCHREIBUNG / „Info" (Feld erlaubt bis ca. 255 Zeichen)
+------------------------------------------------------------
+Ihr Meisterbetrieb für Sanitär, Heizung und Wohnraumlüftung in Balingen und Umgebung.
+Wir stehen für Zuverlässigkeit, Qualität und Sachverstand – von der Badmodernisierung
+über moderne Heizsysteme (u. a. Wärmepumpe) bis zur Wohnraumlüftung.
+
+
+„ÜBER UNS" / Story (längerer Text, ausführlich)
+-----------------------------------------------
+Die TeWa Haustechnik GmbH ist Ihr Meisterbetrieb für Haustechnik in Balingen und der
+Region. Ob neues Bad, moderne Heizung (inkl. Wärmepumpe) oder gesunde Wohnraumlüftung –
+wir planen, installieren und warten Ihre Anlagen zuverlässig aus einer Hand. Transparente
+Kostenaufstellungen und die Zusammenarbeit mit renommierten Herstellern sind für uns
+selbstverständlich. Sie suchen einen sicheren Job im Handwerk? Wir stellen ein:
+Anlagenmechaniker und Servicetechniker (m/w/d).
+
+
+WEITERE SEITEN-FELDER (Empfehlung)
+----------------------------------
+- Seitenname:      TeWa Haustechnik GmbH
+- Nutzername:      @tewahaustechnik (falls verfügbar)
+- Kategorie:       Sanitär-, Heizungs- & Klimaunternehmen  (bzw. Handwerk / lokales Unternehmen)
+- Adresse:         Jakobstraße 6, 72336 Balingen
+- Telefon:         07433 3910270
+- E-Mail:          info@tewa-haustechnik.de
+- Website:         https://tewa-haustechnik.de   (oder Link zur Karriereseite)
