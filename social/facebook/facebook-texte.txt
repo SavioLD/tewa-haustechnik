@@ -12,16 +12,16 @@ Tipp Facebook: Titelbild wird auf Desktop 851×315, auf Mobil ~640×360 angezeig
 das zentrierte Motiv funktioniert auf beidem.
 
 
-BIO (Facebook-Seiten-Bio, max. 101 Zeichen)
+BIO (Facebook-Seiten-Bio, max. 255 Zeichen)
 -------------------------------------------
-EMPFOHLEN (99 Zeichen):
+EMPFOHLEN – Firma (248 Zeichen):
+Die TeWa Haustechnik GmbH ist Ihr Meisterbetrieb für Sanitär, Heizung & Wohnraumlüftung in Balingen und Umgebung. Vom neuen Bad über die moderne Heizung (u. a. Wärmepumpe) bis zur gesunden Lüftung – zuverlässig, hochwertig und alles aus einer Hand.
+
+RECRUITING-VARIANTE (254 Zeichen):
+TeWa Haustechnik GmbH – Ihr Meisterbetrieb für Sanitär, Heizung & Wohnraumlüftung in Balingen. Qualität und faire Arbeit, bei Kund:innen wie im Team. Du suchst einen sicheren Job im Handwerk? Wir stellen ein: Anlagenmechaniker & Servicetechniker (m/w/d).
+
+KURZ (99 Zeichen, falls das Feld doch nur 101 erlaubt):
 Ihr Meisterbetrieb für Haustechnik in Balingen: Sanitär, Heizung & Wohnraumlüftung – Ihr SHK-Profi.
-
-ALTERNATIVE (96 Zeichen):
-Meisterbetrieb für Sanitär, Heizung & Wohnraumlüftung in Balingen. Bad- & Heizungsmodernisierung.
-
-RECRUITING-VARIANTE (95 Zeichen):
-Haustechnik-Meisterbetrieb aus Balingen. Wir suchen Anlagenmechaniker & Servicetechniker (m/w/d).
 
 
 KURZBESCHREIBUNG / „Info" (Feld erlaubt bis ca. 255 Zeichen)
