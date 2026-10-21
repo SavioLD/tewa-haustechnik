@@ -1,0 +1,99 @@
+META LEAD-FORMULAR – SERVICETECHNIKER SHK (m/w/d) · TeWa Haustechnik GmbH, Balingen
+===================================================================================
+KO-Screening (nur Muss-Anforderungen, Antworten Ja/Nein). Zum 1:1-Reinkopieren
+in den Meta Werbeanzeigenmanager (Formular erstellen).
+
+EINSTELLUNGEN (Empfehlung)
+--------------------------
+- Formulartyp:                 Höhere Absicht  (bessere Lead-Qualität; Prüfschritt)
+- Flexible Formularauslieferung: AUS  (sonst entfernt/ordnet Meta die Screening-Fragen um)
+- Sprache:                     Deutsch
+
+--------------------------------------------------------------------
+1) FORMULARNAME  (nur intern sichtbar)
+--------------------------------------------------------------------
+Servicetechniker SHK – Balingen – KO-Screening
+
+--------------------------------------------------------------------
+2) INTRO
+--------------------------------------------------------------------
+Begrüßung / Titel:
+Servicetechniker SHK (m/w/d) – TeWa Haustechnik, Balingen
+
+Beschreibung (Layout „Liste" empfohlen):
+• Unbefristet & sicher – im Meisterbetrieb
+• Eigenes Servicefahrzeug & moderne Technik
+• Faire, übertarifliche Bezahlung
+• Einsätze in der Region – abends zu Hause
+Beantworte kurz 4 Fragen – wir melden uns persönlich bei dir.
+
+--------------------------------------------------------------------
+3) FRAGEN
+--------------------------------------------------------------------
+A) KONTAKTINFORMATIONEN (vorausgefüllt von Meta):
+   - Vollständiger Name
+   - Telefonnummer
+   - E-Mail-Adresse
+
+B) KO-FRAGEN  (Typ je Frage: „Multiple Choice" · Antworten: Ja / Nein)
+   Hinweis: „Ja" = Anforderung erfüllt. Leads mit „Nein" aussortieren.
+
+   Frage 1:
+   Hast du eine abgeschlossene Ausbildung im SHK-Bereich (z. B. Anlagenmechaniker SHK,
+   Gas-/Wasserinstallateur, Heizungsbauer) ODER mehrjährige Berufserfahrung in Sanitär/Heizung?
+   • Ja
+   • Nein
+
+   Frage 2:
+   Besitzt du einen gültigen Führerschein der Klasse B?
+   • Ja
+   • Nein
+
+   Frage 3:
+   Sprichst du gut Deutsch für den direkten Kundenkontakt (mind. B2)?
+   • Ja
+   • Nein
+
+   Frage 4:
+   Wohnst du im Umkreis von ca. 30 km um Balingen – oder bist du bereit, dorthin
+   zu pendeln bzw. umzuziehen?
+   • Ja
+   • Nein
+
+--------------------------------------------------------------------
+4) DATENSCHUTZRICHTLINIE
+--------------------------------------------------------------------
+Link zur Datenschutzerklärung:
+https://tewa-haustechnik.de/datenschutz
+
+Optionaler Einwilligungstext (eigene Notiz / Kontrollkästchen):
+Ich bin damit einverstanden, dass die TeWa Haustechnik GmbH meine Angaben zur
+Bearbeitung meiner Bewerbung und zur Kontaktaufnahme verarbeitet (Art. 6 Abs. 1
+lit. a DSGVO). Die Daten werden vertraulich behandelt.
+
+--------------------------------------------------------------------
+5) ENDE (Dankesseite)
+--------------------------------------------------------------------
+Titel:
+Danke für deine Bewerbung!
+
+Beschreibung:
+Wir haben deine Angaben erhalten und melden uns persönlich bei dir – meist
+telefonisch für ein kurzes Kennenlernen. Bis gleich!
+
+Button-Text:
+Mehr über TeWa
+
+Website-Link:
+https://tewa-haustechnik.de
+
+(Alternativ Button „Jetzt anrufen" mit Telefonnummer: 07433 3910270)
+
+--------------------------------------------------------------------
+OPTIONAL – weitere KO-Frage (nur falls zwingend gewünscht)
+--------------------------------------------------------------------
+Hast du bereits Erfahrung im Kundendienst / in der Wartung von Heizungs- oder
+Sanitäranlagen?
+• Ja
+• Nein
+(Weglassen, wenn auch gute Anlagenmechaniker ohne Service-Erfahrung infrage kommen.)
