@@ -69,17 +69,13 @@ https://tewa-haustechnik.de/datenschutz
 Überschrift (optional):
 Datenschutz – warum wir deine Daten brauchen
 
-Beschreibung „Warum & wofür" (Haftungsausschluss-/Infotext):
-Damit wir deine Bewerbung bearbeiten und dich zur Stelle als Servicetechniker
-(m/w/d) kontaktieren können, benötigen wir deinen Namen, deine Telefonnummer,
-deine E-Mail-Adresse und deine Angaben zu den Anforderungen. Wir verwenden diese
-Daten ausschließlich zur Prüfung deiner Eignung, zur Kontaktaufnahme und zur
-Durchführung des Bewerbungsverfahrens. Rechtsgrundlage ist deine Einwilligung
-(Art. 6 Abs. 1 lit. a DSGVO) sowie § 26 BDSG. Deine Daten werden vertraulich
-behandelt, nicht an unbefugte Dritte weitergegeben und nach Abschluss des
-Verfahrens gelöscht, sofern es nicht zu einer Einstellung kommt. Du kannst deine
-Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen. Weitere Infos:
-https://tewa-haustechnik.de/datenschutz
+Beschreibung „Warum & wofür" (kurz):
+Wir verarbeiten deinen Namen, deine Kontaktdaten und deine Angaben, um deine
+Bewerbung als Servicetechniker (m/w/d) zu prüfen und dich zu kontaktieren.
+Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 26 BDSG).
+Deine Daten werden vertraulich behandelt, nicht an Unbefugte weitergegeben und
+nach dem Verfahren gelöscht. Widerruf jederzeit möglich.
+Mehr: tewa-haustechnik.de/datenschutz
 
 Kurzfassung für ein Einwilligungs-Kontrollkästchen (≈ 300 Zeichen):
 Ich willige ein, dass die TeWa Haustechnik GmbH meine Angaben zur Bearbeitung
